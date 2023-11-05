@@ -2,6 +2,7 @@
 {
     "version": "0.2.0",
     "configurations": [
+        
 
         {
             "name": "Sandbox Project",
@@ -79,7 +80,7 @@
             "console": "integratedTerminal",
             "internalConsoleOptions": "neverOpen",
             "stopAtEntry": false
-        },
+        }
 
         {
             "name": "Learning 02 (Resume)",
@@ -92,7 +93,7 @@
             "console": "integratedTerminal",
             "internalConsoleOptions": "neverOpen",
             "stopAtEntry": false
-        },
+        }
 
         {
             "name": "Learning 03 (Fraction)",
@@ -105,7 +106,7 @@
             "console": "integratedTerminal",
             "internalConsoleOptions": "neverOpen",
             "stopAtEntry": false
-        },
+        }
 
         {
             "name": "Learning 04 (Homework)",
@@ -183,7 +184,7 @@
             "console": "integratedTerminal",
             "internalConsoleOptions": "neverOpen",
             "stopAtEntry": false
-        },
+        }
 
         {
             "name": "Final Project (Open ended)",
@@ -196,7 +197,7 @@
             "console": "integratedTerminal",
             "internalConsoleOptions": "neverOpen",
             "stopAtEntry": false
-        },
+        }
 
         {
             "name": "Foundation 1 (YouTube)",
@@ -209,7 +210,7 @@
             "console": "integratedTerminal",
             "internalConsoleOptions": "neverOpen",
             "stopAtEntry": false
-        },
+        }
 
         {
             "name": "Foundation 2 (Products)",
@@ -222,7 +223,7 @@
             "console": "integratedTerminal",
             "internalConsoleOptions": "neverOpen",
             "stopAtEntry": false
-        },
+        }
 
         {
             "name": "Foundation 3 (Events)",
@@ -235,7 +236,7 @@
             "console": "integratedTerminal",
             "internalConsoleOptions": "neverOpen",
             "stopAtEntry": false
-        },
+        }
 
         {
             "name": "Foundation 4 (Exercise)",
@@ -248,7 +249,7 @@
             "console": "integratedTerminal",
             "internalConsoleOptions": "neverOpen",
             "stopAtEntry": false
-        },
+        }
 
     ]
 }
