@@ -1,22 +1,51 @@
-using System;
-using System.Globalization;
-
 class Program
 {
     static void Main(string[] args)
     {
-        
         List<int> numbers = new List<int>();
-        int userNumber=-1;
         
-
-        while (userNumber!=0);
-        Console.WriteLine("Type a number:");
         
+        int userNumber = -1;
+        while (userNumber != 0)
+        {
+            Console.Write("Enter a number (0 to quit): ");
+            
+            string userResponse = Console.ReadLine();
+            userNumber = int.Parse(userResponse);
+            
+            // conditional
+            if (userNumber != 0)
+            {
+                numbers.Add(userNumber);
+            }
+        }
 
-    
+        // addition
+        int sum = 0;
+        foreach (int number in numbers)
+        {
+            sum += number;
+        }
 
-    
+        Console.WriteLine($"The sum is: {sum}");
 
+        // average just remember the formula add number /#of numbers
+        float average = ((float)sum) / numbers.Count;
+        Console.WriteLine($"The average is: {average}");
+
+        // max 
+        
+        int max = numbers[0];
+
+        foreach (int number in numbers)
+        {
+            if (number > max)
+            {
+                // if this number is greater than the max, we have found the new max!
+                max = number;
+            }
+        }
+
+        Console.WriteLine($"The max is: {max}");
     }
 }

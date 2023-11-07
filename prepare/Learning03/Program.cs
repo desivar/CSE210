@@ -35,20 +35,22 @@ const int STOPVALUE = 0;
              {
                  Environment.Exit(0);
              }
-         }      
- if (inputNumber > magicNumber)
+         }      if (inputNumber > magicNumber)
          {
-             Console.WriteLine("too higher");
+             Console.WriteLine("Higher");
          }
 
          if (inputNumber < magicNumber)
          {
-             Console.WriteLine("Too lower");
+             Console.WriteLine("Lower");
          }
-     }
+     } 
+    
      while (inputNumber != STOPVALUE);
  }
+
 }
+
 
       
       
