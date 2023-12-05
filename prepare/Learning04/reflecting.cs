@@ -52,7 +52,7 @@ public class ReflectingActivity : Activity
         Console.WriteLine();
         Console.WriteLine($"--- {prompt} ---");
         Console.WriteLine();
-        Console.WriteLine("As soon as you have the asnwer, press enter to continue.");
+        Console.WriteLine("As soon as you raedy, press enter to continue.");
         Console.ReadLine();
         Console.Clear();
         
