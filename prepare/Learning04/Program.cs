@@ -1,51 +1,74 @@
+using System;
+
 class Program
 {
     static void Main(string[] args)
     {
-        List<int> numbers = new List<int>();
-        
-        
-        int userNumber = -1;
-        while (userNumber != 0)
+        string input = "";
+        int breathingLog = 0;
+        int reflectingLog = 0;
+        int listeningLog = 0;
+
+        void DisplayLog()
         {
-            Console.Write("Enter a number (0 to quit): ");
+            Console.WriteLine("Activity Log - Current Session");
+            Console.WriteLine($"Breathing Activity: {breathingLog}");
+            Console.WriteLine($"Reflecting Activity: {reflectingLog}");
+            Console.WriteLine($"Listening Activity: {listeningLog}");
+            Console.WriteLine();
+        }
+
+        while (input != "4")
+        {
+            Console.Clear();
+            DisplayLog();
+            Console.WriteLine("Menu Options:");
+            Console.WriteLine("1. Start breathing activity");
+            Console.WriteLine("2. Start reflecting activity");
+            Console.WriteLine("3. Start listening activity");
+            Console.WriteLine("4. Quit");
+            Console.Write("Select a choice from the menu: ");
+
+            input = Console.ReadLine();
             
-            string userResponse = Console.ReadLine();
-            userNumber = int.Parse(userResponse);
-            
-            // conditional
-            if (userNumber != 0)
+            switch (input)
             {
-                numbers.Add(userNumber);
+                case "1":
+                    BreathingActivity breathingActivity = new BreathingActivity();
+                    breathingActivity.RunActivity();
+                    breathingActivity.PromptBreathing();
+                    breathingActivity.EndActivity();
+
+                    breathingLog++;
+                    break;
+
+                case "2":
+                    ReflectingActivity reflectingActivity = new ReflectingActivity();
+                    reflectingActivity.RunActivity();
+                    reflectingActivity.PromptReflecting();
+                    reflectingActivity.EndActivity();
+
+                    reflectingLog++;
+                    break;
+
+                case "3":
+                    ListingActivity listeningActivity = new ListeningActivity();
+                    listeningActivity.RunActivity();
+                    listeningActivity.PromptListing();
+                    listeningActivity.EndActivity();
+
+                    listeningLog++;
+                    break;
+
+                case "4":
+                    Environment.Exit(0);
+                    break;
+
+                default:
+                    Console.WriteLine("Please enter your  menu option. ");
+                    break;
             }
         }
-
-        // addition
-        int sum = 0;
-        foreach (int number in numbers)
-        {
-            sum += number;
-        }
-
-        Console.WriteLine($"The sum is: {sum}");
-
-        // average just remember the formula add number /#of numbers
-        float average = ((float)sum) / numbers.Count;
-        Console.WriteLine($"The average is: {average}");
-
-        // max 
-        
-        int max = numbers[0];
-
-        foreach (int number in numbers)
-        {
-            if (number > max)
-            {
-                // if this number is greater than the max, we have found the new max!
-                max = number;
-            }
-        }
-
-        Console.WriteLine($"The max is: {max}");
+        Environment.Exit(0);
     }
 }
