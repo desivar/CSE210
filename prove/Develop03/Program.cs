@@ -1,49 +1,55 @@
 using System;
-
-class Program
+class Entry
 {
-    static void Main(string[] args)
-    {
-        using System;
+    private string _ref;
+    public string _verse;
+    internal readonly int length;
 
-public class Fraction
-{
-    private int _top;
-    private int _bottom;
-
-    public Fraction()
+    // This is a constructor with specific arguments
+    public Entry(string refr, string verses)
     {
-        // Default to 1/1
-        _top = 1;
-        _bottom = 2;
+        _ref = refr;
+        _verse = verses;
     }
 
-    public Fraction(int wholeNumber)
+    // This is a no-argument constructor for setting default values of an object.
+    public Entry() { }
+    public string addRef(string reference)
     {
-        _top = wholeNumber;
-        _bottom = 2;
+        _ref = reference;
+        return _ref;
+    }
+    List<string> list = new List<string> { };
+    List<string> list2 = new List<string> { };
+    public string addVerse(string verse)
+    {
+        _verse = verse;
+        return _verse;
+    }
+    // method to add the scripture as a string into the available list
+    public void addScripture(string r, string v)
+    {
+        list.Add($"{r}, {v}");
+    }
+    public void displayQ()
+    {
+        var random = new Random();
+        int index = random.Next(list.Count);
+        string count = list[index];
+        Console.WriteLine(count);
+
     }
 
-    public Fraction(int top, int bottom)
+    public void addScripture2(string r, string v)
     {
-        _top = top;
-        _bottom = bottom;
+        list2.Add($"{r},{v}");
     }
 
-    public string GetFractionString()
+    public void displayQ2()
     {
-        // Notice that this is not stored as a member variable.
-        // Is is just a temporary, local variable that will be recomputed each time this is called.
-        string text = $"{_top}/{_bottom}";
-        return text;
-    }
-
-    public double GetDecimalValue()
-    {
-        // Notice that this is not stored as a member variable.
-        // Is will be recomputed each time this is called.
-        return (double)_top / (double)_bottom;
-    }
-}
+        var random = new Random();
+        int index = random.Next(list2.Count);
+        string count = list2[index];
+        Console.WriteLine(count);
     }
 }
