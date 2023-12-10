@@ -11,7 +11,7 @@ public class Goal
     {
         _name = "Test Name";
         _description = "Test Description";
-        _goalPoints = 50;
+        _goalPoints = 65;
         _status = false;
     }
 
