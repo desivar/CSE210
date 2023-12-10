@@ -1,0 +1,29 @@
+
+
+Goal organizer
+Program:
+> static void Main(string[] args): It will run the program, first of all this program will help to create and have track of personl goals. 
+ths program wil show rewards as soon as you progress in your personal goals.Will have a kind of menu when you will choose the are in ich you like to progress.
+
+Journal:
+> public void displayJournal(): 
+
+Entry:
+> public void displayEntry(): It will use the data stored in the class atributes in order to print the entry. It will format the entry as {DATE} - Prompt: {PROMPT} {ANSWER}.
+
+PromptGenerator:
+> public string getPrompt(): It will use the attribute list _prompts and pick a random prompt from the list, to return it.
+
+Program:
+The program will be store information and keep a record of the personal goals and will assign a score for each one.
+
+Journal:
+> List<Entry> _entries: a list taken from Entry class in order to get all entries by user
+
+Entry:
+>_date: as the program split the entries as strings, this attribute will store de date
+>_prompt: as the program split the entries as strings, this attribute will store de prompt
+>_answer: as the program split the entries as strings, this attribute will store de answer
+
+PromptGenerator:
+List<string> _prompts: it will store all the prompts. A random promp wil be selected for the program.
