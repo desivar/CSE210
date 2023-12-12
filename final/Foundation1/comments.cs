@@ -1,8 +1,8 @@
-public class Comments
+public class Comment
 {
     private string _userName;
     private string _comment;
-    public Comments(string userName,string comment)
+    public Comment(string userName,string comment)
 
     {
         _userName=userName;
