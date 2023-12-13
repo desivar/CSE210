@@ -1,3 +1,5 @@
+using System;
+
 public class RunningActivity : Activity
 {
     private double _distance;
