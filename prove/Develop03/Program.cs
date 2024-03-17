@@ -1,9 +1,9 @@
-// For extra credit/use more than 1 scripture/ user can pick the scripture than want to learn
+// For extra credit/more than 1 scripture/ user can pick the scripture than want to learn
 class Program
 {
     static void Main(string[] args)
     {
-        string MENU = " 1. Alma 48:17 \n 2. 2 Nephi 25:26 \n 3. Moroni 10: 29-30 \n What scripture do you want to memorize?: ";
+        string MENU = " 1. Alma 48:17 \n 2. 2 Nephi 25:26 \n 3. 4 Nephi 1: 15-16 \n What scripture do you want to memorize?: ";
         Console.WriteLine(MENU);
         int userInput = int.Parse(Console.ReadLine());
         switch (userInput)
@@ -24,9 +24,9 @@ class Program
                 break;
 
             case 3:
-            text = "And God shall show unto you, that that which I have written is true. And again I would exhort you that ye would come unto Christ, and lay hold upon every good gift, and touch not the evil gift, nor the unclean thing";
+            text = "And it came to pass that there was no contention in the land, because of the blove of God which did dwell in the hearts of the people. And it came to pass that there was no contention in the land, because of the love of God which did dwell in the hearts of the people.";
             Scripture scripture3 = new Scripture(text);
-            Reference reference3 = new Reference("Moroni", 10, 29,30);
+            Reference reference3 = new Reference("4 Nephi", 1, 15,16);
 
             UserInterface(scripture3,reference3);
             break;
@@ -41,7 +41,7 @@ class Program
             Console.WriteLine(reference.GetReference());
             Console.WriteLine(scripture.GetText());
             Console.WriteLine("");
-            Console.WriteLine("Please write ENTER to hide more words or type QUIT to end.");
+            Console.WriteLine("Write ENTER to hide more words or type QUIT to end.");
             userInput = Console.ReadLine();
             scripture.HideWords();
             if (scripture.IsCompletelyHidden())
