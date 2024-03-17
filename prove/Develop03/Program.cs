@@ -1,9 +1,9 @@
-// For extra credi/3 scriptures/ user can pick one of the scripures in the menu, and run 
+// For extra credit/use more than 1 scripture/ user can pick the scripture than want to learn
 class Program
 {
     static void Main(string[] args)
     {
-        string MENU = " 1. Alma 48:17 \n 2. 2 Nephi 25:26 \n 3. Moroni 10: 29-30 \n Please, choose a scripture to memorize: ";
+        string MENU = " 1. Alma 48:17 \n 2. 2 Nephi 25:26 \n 3. Moroni 10: 29-30 \n What scripture do you want to memorize?: ";
         Console.WriteLine(MENU);
         int userInput = int.Parse(Console.ReadLine());
         switch (userInput)
@@ -41,7 +41,7 @@ class Program
             Console.WriteLine(reference.GetReference());
             Console.WriteLine(scripture.GetText());
             Console.WriteLine("");
-            Console.WriteLine("Press ENTER to hide more words or type QUIT to end the program.");
+            Console.WriteLine("Please write ENTER to hide more words or type QUIT to end.");
             userInput = Console.ReadLine();
             scripture.HideWords();
             if (scripture.IsCompletelyHidden())
