@@ -1,3 +1,4 @@
+//the program require title/lenght/author comments
 public class Video
 {
     private string _author;
@@ -41,7 +42,7 @@ public class Video
 
     }
     
-    //GETTERS
+    //what do we need to get?/author/title/lenght/comment
     public string GetAuthor()
     {
         return _author;
